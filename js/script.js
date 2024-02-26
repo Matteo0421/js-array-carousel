@@ -1,6 +1,7 @@
 const itemsSlide = document.querySelector('.items-slide');
 const botton = document.querySelector('.botton');
 const sopra = document.querySelector('.sopra');
+const previw = document.querySelector('previw');
 
 sopra.classList.add('hide');
 
@@ -19,16 +20,26 @@ for(let i = 0; i < images.length; i++){
   itemsSlide.innerHTML += `<img class="img hide" src="${img}"> `
   console.log(img);
   console.log(itemsSlide);
+  
 }
 
 const itemsCollection = document.getElementsByClassName('img');
+const previwCollection = document.getElementsByClassName('previw');
+
 
 itemsCollection[counterImg].classList.remove('hide');
 
 sopra.addEventListener('click', function (){
   botton.classList.remove('hide');
 
-itemsCollection[counterImg--].classList.add('hide');
+itemsCollection[counterImg].classList.add('hide');
+
+previwCollection[counterImg].classList.remove('active');
+
+counterImg--;
+
+previwCollection[counterImg].classList.add('active');
+
 
 if (counterImg === 0){
   sopra.classList.add('hide')
@@ -43,7 +54,13 @@ botton.addEventListener('click', function (){
 
   sopra.classList.remove('hide');
 
-  itemsCollection[counterImg++].classList.add('hide');
+  itemsCollection[counterImg].classList.add('hide');
+
+  previwCollection[counterImg].classList.remove('active');
+
+  counterImg++;
+
+  previwCollection[counterImg].classList.add('active');
   
   itemsCollection[counterImg].classList.remove('hide');
   

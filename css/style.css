@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img{
+  width: 100%;
+}
+
 .main{
   height: 100vh;
   background-color: rgba(0, 0, 255, 0.6);
@@ -17,6 +21,22 @@
 }
 .items-slide{
   height: 100%;
+  width: 80%;
+}
+
+.previw-items{
+  width: 20%;
+  height: 100%;
+}
+
+.previw{
+  height: 20%;
+  object-fit: cover;
+  opacity: 65%;
+}
+
+.previw.active{
+  opacity: 100%;
 }
 
 .items-slide img{
