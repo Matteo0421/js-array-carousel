@@ -6,16 +6,15 @@ const sopra = document.querySelector('.sopra');
 // 1
 const images = [
   './consegna/img/01.webp',
-  'consegna/img/02.webp',
-  'consegna/img/03.webp',
-  'consegna/img/04.webp',
-  'consegna/img/05.webp',
+  './consegna/img/02.webp',
+  './consegna/img/03.webp',
+  './consegna/img/04.webp',
+  './consegna/img/05.webp',
 ];
-
 // 2
 for(let i = 0; i < images.length; i++){
   const img = images[i];
-  itemsSlide.innerHTML += `<img class="img hide" scr=" ${img} "> `
+  itemsSlide.innerHTML += `<img class="img hide" src="${img}"> `
   console.log(img);
-  // console.log(itemsSlide);
+  console.log(itemsSlide);
 }
