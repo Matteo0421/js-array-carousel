@@ -1,8 +1,10 @@
 const itemsSlide = document.querySelector('.items-slide');
-const bottom = document.querySelector('.bottom');
+const botton = document.querySelector('.botton');
 const sopra = document.querySelector('.sopra');
 
+sopra.classList.add('hide');
 
+let counterImg = 0;
 // 1
 const images = [
   './consegna/img/01.webp',
@@ -18,3 +20,34 @@ for(let i = 0; i < images.length; i++){
   console.log(img);
   console.log(itemsSlide);
 }
+
+const itemsCollection = document.getElementsByClassName('img');
+
+itemsCollection[counterImg].classList.remove('hide');
+
+sopra.addEventListener('click', function (){
+  botton.classList.remove('hide');
+
+itemsCollection[counterImg--].classList.add('hide');
+
+if (counterImg === 0){
+  sopra.classList.add('hide')
+}
+
+itemsCollection[counterImg].classList.remove('hide');
+
+})
+
+botton.addEventListener('click', function (){
+  
+
+  sopra.classList.remove('hide');
+
+  itemsCollection[counterImg++].classList.add('hide');
+  
+  itemsCollection[counterImg].classList.remove('hide');
+  
+  if (counterImg === images.length - 1){
+    botton.classList.add('hide')
+  }
+  })
