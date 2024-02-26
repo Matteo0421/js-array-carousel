@@ -47,3 +47,7 @@
 .btn-arrow.botton{
   bottom: 10px;
 }
+
+.hide{
+  display: none;
+}
