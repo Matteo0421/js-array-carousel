@@ -38,6 +38,7 @@ img{
 
 .previw.active{
   opacity: 100%;
+  border: 3px solid white;
 }
 
 .items-slide img{
