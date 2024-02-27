@@ -33,7 +33,7 @@ img{
 .previw{
   height: 20%;
   object-fit: cover;
-  opacity: 65%;
+  opacity: 50%;
 }
 
 .previw.active{
